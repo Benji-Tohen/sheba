@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+.disapear{
+	z-index: -1;
+	position: absolute;
+	visibility: hidden;	
+}
+.apear{
+	z-index: 3;
+	position: relative;
+	visibility: visible;
+}
+*/
+.disapear{
+	z-index: -1;
+	position: absolute;
+	display: none;
+}
+
+.apear{
+	z-index: 3;
+	position: relative;
+	display: block;
+}
+
+.buffer{
+	clear: both;
+	height: 10px;
+}

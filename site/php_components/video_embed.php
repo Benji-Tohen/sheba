@@ -1,0 +1,1 @@
+<object width="337" height="274"><param name="movie" value="http://www.youtube.com/v/<?php echo $wmPage["Video_Embed"];?>&rel=1"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/<?php echo $wmPage["Video_Embed"];?>&rel=1" type="application/x-shockwave-flash" wmode="transparent" width="337" height="274"></embed></object>

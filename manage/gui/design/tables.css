@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+input{
+	border: 1px solid #c0c0c0;
+}
+
+textarea{
+	border: 1px solid #c0c0c0;
+}
+
+file{
+	border: 1px solid #c0c0c0;	
+}
+
+
+td{
+
+}
+
+.list_tr_0{
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.list_tr_1{
+	background-color: #e0e0e0;
+}
+
+.list_tr_0 td{
+	color: #000000;
+}
+
+.list_tr_1 td{
+	color: #000000;
+}
+
+
+
+
+.navigator_line{
+	position: absolute;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #ffffff !important;
+	padding: 4px;
+	padding-left: 7px;
+	padding-right: 10px;
+	right: 0px;
+    height: 12px;
+    overflow: hidden;
+}
+.navigator_line a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight: bold;	
+}
+.navigator_line a:visited{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight: bold;	
+}
+
+.editPagePadding{
+	background-image: url(../images/admin/admin_top_head.png);
+	background-repeat: repeat-x;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 50px;
+	overflow: auto;
+	height: 646px;
+}
+
+
+
+
+.editPagePaddingPageEdit{
+	background-image: url(../images/admin/admin_top_head.png);
+	background-repeat: repeat-x;
+
+	padding-top: 21px;
+}
+
+.listPagePadding{
+	background-image: url(../images/admin/admin_top_head_list.png);
+	background-repeat: repeat-x;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 20px;
+}
+
+.listPagePaddingItems{
+	background-image: url(../images/admin/admin_top_head_list.png);
+	background-repeat: repeat-x;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 30px;
+}
+
+.listItemsContainer{
+
+
+
+}
+
+
+.list_table{
+	color: #000000;
+}
+
+.list_table th{
+	color: #ffffff;
+	text-align: left;
+}
+
+.call_center_table th{
+	color: #FFFEA7;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.customer_table th{
+	text-align: left;
+	color: #FFFEA7;
+}
+
+
+
+
+
+.adminButton{
+	cursor: pointer;
+	padding-right: 8px;
+	padding-left: 8px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+
+
+
+
+
+/*	Search		*/
+
+
+
+.suggest_link {
+	background-color: #FFFFFF;
+	padding: 2px 6px 2px 6px;
+	cursor: pointer;
+}
+.suggest_link_over {
+	background-color: #B82336;
+	color: #ffffff;
+	padding: 2px 6px 2px 6px;
+	cursor: pointer;
+}
+
+
+#newPageForm{
+	display: none;
+}
+
+.pager_numbers{
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	font-size: 18px;
+}
+
+.pager_numbers img{
+	margin-bottom: 1px;
+	height: 12px;
+	width: 12px;
+}
+
+.pager_selected{
+	color: #a80203 !important;
+}
+
+
+
+.itemsListPageHeader{
+	width: 750px;
+}
+
+.searchItemsForm{
+	padding: 0px;
+	margin: 0px;
+	padding-top: 10px;
+	padding-right: 23px;
+}
+
+

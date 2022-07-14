@@ -1,0 +1,88 @@
+html, body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 0px;
+	margin: 0px;	
+}
+
+.richtext{
+	margin: 0px;
+	text-align: justify;
+	font-size: 15px;
+}
+
+b, strong{
+	font-weight: bold;
+}
+
+P{
+	margin: 0px;
+}
+
+img{
+	border: none;
+}
+
+p img{
+	margin: 0px;
+	padding: 0px;
+	margin-left: 18px;
+	margin-bottom: 12px;
+	text-align: right;
+}
+
+
+a, a:visited, a:hover{
+	font-weight: normal;
+	text-decoration: none;
+}
+
+
+h1, h1 a, h1 a:visited, h1 a:hover{
+	padding: 0px;
+	margin: 0px;
+
+}
+
+h2, h2 a, h2 a:visited, h2 a:hover{
+	font-size: 20px;
+	padding: 0px;
+	margin: 0px;	
+	font-weight: normal;
+	margin-bottom: 8px;
+	color: #a4251f !important;
+}
+
+h3{
+	font-size: 16px;
+	font-weight: normal;	
+	padding: 0px;
+	margin: 0px;
+	color: #00DDBB !important;
+}
+
+.pink{
+
+	color: #000000 !important;
+}
+
+
+.Bold{
+	font-weight: bold;
+}
+
+.Title{
+	font-weight: bold;
+	font-size: 18px;
+
+	color: #000000 !important;	
+}
+
+.Code{
+	border: #8b4513 1px solid;
+	padding-right: 5px;
+	padding-left: 5px;
+	color: #000066;
+	font-family: 'Courier New' , Monospace;
+	background-color: #ff9933;
+}

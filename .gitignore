@@ -1,0 +1,8 @@
+conf/
+datauplodscripts/
+webfiles/
+robots.txt
+.htaccess
+successURLS.txt
+failedURLS.txt
+.push.settings.jsonc

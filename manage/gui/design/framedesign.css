@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+HTML, BODY{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	
+	padding: 0px;
+	margin: 0px;
+}
+
+.top{
+	width: 100%;
+	height: 70px;
+}
+
+.menu{
+	float: left;
+	width: 100px;
+	height: 80%;
+}
+
+.main{
+	width: 100%;
+	height: 100%;
+}
+
+.bottom{
+	width: 100%;
+	height: 70px;
+}
+
+.bottom_line{
+	padding-top: 2px;
+	padding-left: 10px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.headline{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 5px;
+
+	background-color: #000000;
+	border-bottom: 1px solid #ffffff;
+
+/*
+	background-color: #326587;
+	border-bottom: 1px solid #000033;
+*/
+
+	text-align: center;		
+}
+
+.menuHeadline{
+	background-image: url(../images/menu/admin_menu_header_bg.png);
+	background-repeat: repeat-x;
+	height: 18px;
+	text-align: center;
+	color: #ffffff;
+	padding-top: 2px;
+	font-weight: bold;
+}
+
+.menuHeader{
+	padding-top: 15px;
+	color: #000000;
+	font-weight: bold;
+	padding-bottom: 5px;
+	background-image: url(../images/menu/admin_menu_line.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.menuLinks{
+
+	
+}
+
+.menuLinks a, .menuLinks a:visited, .menuLinks a:hover{
+	color: #000000;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.menuLink{
+	cursor: pointer;
+	width: 140px;
+	height: 18px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 2px;
+}
+
+.menuLink:hover{
+	background-image: url(../images/menu/admin_menu_button_hover.png);
+	background-repeat: no-repeat;
+}
+
+.menuLink a, .menuLink a, .menuLink a{
+	margin-right: 5px;
+}
+
+.menuLinkSelected{
+	background-image: url(../images/menu/admin_menu_button.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 140px;
+	height: 18px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-top: 2px;	
+}
+
+.menuLinkSelected a, .menuLinkSelected a, .menuLinkSelected a{
+	
+}
+
+
+

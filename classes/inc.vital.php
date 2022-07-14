@@ -1,0 +1,9 @@
+<?php
+require_once(dirname(__FILE__).'/DB/class.database.php');
+require_once(dirname(__FILE__).'/tree/class.TreeData.php');
+require_once(dirname(__FILE__).'/webmaster/class.webmaster.php');
+require_once(dirname(__FILE__).'/time/class.date_time.php');
+require_once(dirname(__FILE__).'/login/class.login.php');
+require_once(dirname(__FILE__).'/log/class.log.php');
+require_once(dirname(__FILE__).'/ipblock/ipblock.class.php');
+?>

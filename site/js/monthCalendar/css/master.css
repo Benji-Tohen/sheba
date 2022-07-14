@@ -1,0 +1,130 @@
+
+body {
+	font-family: arial;
+	text-align: center;
+}
+
+.monthCalendar{
+	width: 170px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.monthCalendarNav{
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.monthCalendarNavRight{
+	float: right;
+	background-image: url(../img/prev.png);
+	width: 10px;
+	height: 10px;
+	margin-top: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.monthCalendarNavLeft{
+	float: left;
+	background-image: url(../img/next.png);
+	width: 10px;
+	height: 10px;
+	margin-top: 5px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.monthCalendar table {
+	border-collapse: separate;
+	
+	margin: 10px auto;
+	font-size: 14px;
+}
+.monthCalendar td, .monthCalendar th {
+	padding: 0px;
+	width: 22px;
+	height: 17px;
+	text-align: center;
+	vertical-align: middle;
+	
+	color: #000000;
+	position: relative;
+	cursor: pointer;
+}
+.monthCalendar th {
+	height: 30px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #ca0c00;
+}
+.monthCalendar td:hover, .monthCalendar th:hover {
+	background-position: 0px -81px;
+	color: #222;
+}
+.monthCalendar td.date_has_event {
+	color: #ca0c00;
+	font-weight: bold;
+}
+.monthCalendar td.date_has_event:hover {
+	background-position: 162px -81px;
+}
+.monthCalendar td.padding {
+	
+}
+.monthCalendar td.today {
+	font-weight: bold;	
+	color: #ffffff !important;
+	background-color: #ca0c00;
+}
+.monthCalendar td.today:hover {
+	background-position: 81px -81px;
+}
+.monthCalendar .events {
+	position: relative;
+}
+.monthCalendar .events ul {
+	text-align: left;
+	position: absolute;
+	display: none;
+	z-index: 1000;
+	padding: 15px;
+	background-color: #ffffff;
+	color: #ffffff;
+	border: 1px solid #c0c0c0;
+	font-size: 15px;
+	width: 200px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-border-radius: 3px;
+	list-style: none;
+	
+	-webkit-box-shadow: 0px 8px 8px #333;
+}
+.monthCalendar .events li {
+	padding-bottom: 5px;
+}
+.monthCalendar .events li span {
+	display: block;
+	font-size: 12px;
+	text-align: justify;
+	color: #333333;
+}
+.monthCalendar .events li span.title a{
+	font-weight: bold;
+	color: #000000;
+}
+
+.monthCalendar .events li span.desc {
+	font-weight: normal;
+	color: #000000;
+}
+
+.monthCalendar .events li span.title a, .monthCalendar .events li span.title a:visited, .monthCalendar .events li span.title a:hover{
+	color: #000000 !important;
+	text-decoration: none;
+}
+
+

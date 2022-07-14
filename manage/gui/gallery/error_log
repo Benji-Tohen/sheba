@@ -1,0 +1,12 @@
+[15-Jun-2015 14:36:19 Asia/Jerusalem] PHP Fatal error:  Call to undefined function imagecrop() in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 7
+[15-Jun-2015 14:36:27 Asia/Jerusalem] PHP Fatal error:  Call to undefined function imagecrop() in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 7
+[15-Jun-2015 14:36:28 Asia/Jerusalem] PHP Fatal error:  Call to undefined function imagecrop() in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 7
+[15-Jun-2015 14:36:30 Asia/Jerusalem] PHP Fatal error:  Call to undefined function imagecrop() in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 7
+[15-Jun-2015 14:36:40 Asia/Jerusalem] PHP Fatal error:  Call to undefined function imagecrop() in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 7
+[15-Jun-2015 16:30:58 Asia/Jerusalem] PHP Fatal error:  Class 'ContentUpdater' not found in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 11
+[15-Jun-2015 16:31:00 Asia/Jerusalem] PHP Fatal error:  Class 'ContentUpdater' not found in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 11
+[15-Jun-2015 16:31:00 Asia/Jerusalem] PHP Fatal error:  Class 'ContentUpdater' not found in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 11
+[15-Jun-2015 16:32:11 Asia/Jerusalem] PHP Fatal error:  Class 'ContentUpdater' not found in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 12
+[15-Jun-2015 16:32:12 Asia/Jerusalem] PHP Fatal error:  Class 'ContentUpdater' not found in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 12
+[15-Jun-2015 16:32:20 Asia/Jerusalem] PHP Fatal error:  Class 'ContentUpdater' not found in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 14
+[15-Jun-2015 16:32:21 Asia/Jerusalem] PHP Fatal error:  Class 'ContentUpdater' not found in /home/shebaco/public_html/manage/gui/gallery/gallery_pictures_crop.php on line 14
