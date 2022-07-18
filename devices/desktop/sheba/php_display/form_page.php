@@ -1,7 +1,18 @@
 <?php include($_SERVER["DOCUMENT_ROOT"]."/devices/desktop/sheba/php_components/combo_box.php");?>
+<?php include($_SERVER["DOCUMENT_ROOT"]."/devices/desktop/sheba/php_components/select2.php");?>
 <script>
   $(document).ready(function(){
     $( ".selectpicker" ).combobox();
+    $(".select2").each(function(index, select){
+        const data = {
+            selectionCssClass: "form-control",
+            dir: "rtl"
+        };
+        if( "ph" in select.dataset ){
+            data["placeholder"] = select.dataset.ph;
+        }
+        $(select).select2(data);
+    });
 
     document.getElementById('sendForm').onsubmit = function () {
         delayBtn(document.getElementById('submit'),1000000);

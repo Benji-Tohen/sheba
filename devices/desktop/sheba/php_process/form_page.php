@@ -337,7 +337,7 @@ switch ($pageType) {
             "Sheba_ID" => -1
         );
 
-        
+
 
         if($overrideEventEmail && $overrideEventEmail != ''){
             $event_data["OverrideEventEmail"] = $overrideEventEmail;
@@ -497,6 +497,11 @@ if(is_array($form)){
                                 foreach ($arrInsuranceName as $arrCell) {
                                     $fieldHTML.="<option value=\"".$arrCell["Name"]."\">".$arrCell["Name"]."</option>";
                                 }
+            }else if($field["fieldTypeId"]==68){
+
+                $fieldHTML.="\r\n<select data-ph=\"".$selectPlaceholder."\" id=\"".$fieldName."\" ".$mandatory."name=\"".$fieldName."[]\" multiple class=\"genFormInputText form-control select2\">";
+                                $fieldHTML.="<option value=\"\">".$selectPlaceholder."</option>";
+                                
             }else if($field["fieldTypeId"]!=10){//ןif radio button with text field
                 $fieldHTML="<div class=\"genFormMultipleTitle [#COL#]\">".$field["Name"]."</div>";
             }
@@ -542,7 +547,7 @@ if(is_array($form)){
                 $stam++;
             }
             
-            if($field["fieldTypeId"]==7 || $field["fieldTypeId"]==11 || $field["fieldTypeId"]==12 || $field["fieldTypeId"]==13 || $field["fieldTypeId"]==14 || $field["fieldTypeId"]==15){
+            if( in_array($field["fieldTypeId"], [7,11,12,13,14,15,68]) ){
                 $fieldHTML.="\r\n</select>";
             }
              if($field["fieldTypeId"]==7){

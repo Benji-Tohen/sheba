@@ -76,18 +76,80 @@ $arr=$db->getArray($query); // " WHERE Domain_Parent=$domain_parent AND 1"
 <script type="text/javascript" src="JS/sort/jquery-ui-personalized-1.6rc4.min.js"></script>
 
 <script type="text/javascript">
+	const gui_wm_phones = {
+		data:{
+			getItem: 0,
+			dropItem: 0,
+			buttonClass: ".move-item"
+		},
+		init: function(){
+			$(this.data.buttonClass).click( this.toggleItem );
+		},
+		toggleItem: function(event){
+			event.preventDefault();
+			if( gui_wm_phones.data.getItem == 0 ){
+				gui_wm_phones.data.getItem = this.dataset.id;
+			} else {
+				gui_wm_phones.data.dropItem = this.dataset.id;
+				const 	getItem = $("#listItem_"+gui_wm_phones.data.getItem),
+						dropItem = $("#listItem_"+gui_wm_phones.data.dropItem),
+						nextItem = getItem.next(),
+						getItemClass = getItem.attr("class"),
+						dropItemClass = dropItem.attr("class");
+
+				if( nextItem.attr("id") == dropItem.attr("id") ){
+					dropItem.after(getItem);
+				} else{
+					dropItem.before(getItem);
+				}
+				$('#test-list > li:even').attr("class", "listItem_0");
+				$('#test-list > li:odd').attr("class", "listItem_1");
+				const order = $('#test-list').sortable('serialize');
+				$.get("<?php echo $folderName;?>/order_jquery.php?"+order);
+				gui_wm_phones.data.getItem = 0;
+				gui_wm_phones.data.dropItem = 0;
+			}
+			gui_wm_phones.toggleText();
+		},
+		toggleText: function(){
+			$(this.data.buttonClass).each(function(index, button){
+				const actual = $(button).text();
+				$(button).text(button.dataset.text);
+				button.dataset.text = actual;
+			});
+		},
+		update: function(){
+			var order = $('#test-list').sortable('serialize');
+			$("#info").load("<?php echo $folderName;?>/order_jquery.php?"+order);
+		}
+
+	};
+
   // When the document is ready set up our sortable with it's inherant function(s)
   $(document).ready(function() {
+	gui_wm_phones.init();
     $("#test-list").sortable({
-      handle : '.handle',
-      update : function () {		
-		var order = $('#test-list').sortable('serialize');
-		$("#info").load("<?php echo $folderName;?>/order_jquery.php?"+order);
-		
-      }
+		handle : '.handle',
+		update : function () {
+			var order = $('#test-list').sortable('serialize');
+			$("#info").load("<?php echo $folderName;?>/order_jquery.php?"+order);
+
+		}
     });
 });
 </script>
+<style>
+	.title-flag{
+		background-color:orange;
+		border-radius: 8px;
+		padding: 2px 5px;
+		border: 1px solid #000000;
+		inline-size: max-content;
+	}
+	.move-item{
+		margin-top: .5em;
+	}
+</style>
 <?php require_once('common/body.php');?>
 <div class="navigator_line">
 <a style="color: #ffffff;" href="index.php?show=<?php echo $folderName;?>/index"><?php echo $pageName;?></a><?php echo $text["Items"];?>
@@ -125,10 +187,12 @@ $arr=$db->getArray($query); // " WHERE Domain_Parent=$domain_parent AND 1"
 
 	<div class="listItemContent">
 		<div class="listItemText" dir="<?php echo $gui->getDir();?>">
-			<?php
-				$domainName = $wm->get($arr[$i]["Parent"],"Name");
-			?>
-			<div><?php echo $text["Name"];?><?php echo ":  ".$arr[$i]["Name"];?><?php echo "  ,".$text["Phone"];?><?php echo ":  ".$arr[$i]["AudioFile"]."   ".$domainName;?></div>
+			<?php $domainName = $wm->get($arr[$i]["Parent"],"Name"); ?>
+			<div>
+				<?php if($arr[$i]["Title"] == 1){ ?>
+					<span class="title-flag"><?php echo $text["Title"]; ?></span>
+				<?php } ?>
+				<?php echo $text["Name"];?><?php echo ":  ".$arr[$i]["Name"];?><?php echo "  ,".$text["Phone"];?><?php echo ":  ".$arr[$i]["AudioFile"]."   ".$domainName;?></div>
 		</div>
 
 		<div class="listItemIcon">
@@ -138,6 +202,11 @@ $arr=$db->getArray($query); // " WHERE Domain_Parent=$domain_parent AND 1"
 
 		<div class="listItemIcon">
 			<a href="index.php?show=<?php echo $folderName;?>/edit&amp;page_id=<?php echo $page_id;?>&amp;id=<?php echo $arr[$i]["ID"];?>&amp;search=<?php echo $_REQUEST["search"];?>"><img border="0" src="images/icons/Edit01.png" alt="Edit" /></a>
+		</div>
+		<div class="itemSap"></div>
+
+		<div class="listItemIcon">
+			<button type="button" class="move-item" data-id="<?php echo $arr[$i]["ID"];?>" data-text="<?php echo $text["Drop"]; ?>"><?php echo $text["Get"]; ?></button>
 		</div>
 		<div class="itemSap"></div>
 

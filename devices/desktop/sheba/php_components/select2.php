@@ -1,0 +1,2 @@
+<link href="<?php echo $cfg['WM']['Server']?>/devices/desktop/sheba/libraries/select2/select2.css" rel="stylesheet" />
+<script src="<?php echo $cfg['WM']['Server']?>/devices/desktop/sheba/libraries/select2/select2.js"></script>

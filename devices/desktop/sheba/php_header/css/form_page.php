@@ -20,6 +20,7 @@ h1.{
     font-weight: bold;
 }
 
+.formPage .select2-container--default .select2-selection--multiple.form-control,
 .formPage .form-control{
     max-width: 340px;
     height: 50px;
@@ -33,6 +34,9 @@ h1.{
     -moz-border-radius-bottom<?php echo $gui->getRight();?>: 5px;
     border-top-<?php echo $gui->getRight();?>-radius: 5px;
     border-bottom-<?php echo $gui->getRight();?>-radius: 5px;
+}
+.formPage .select2-container .select2-search--inline .select2-search__field{
+    height: 20px;
 }
 
 .formPage .form-control:last-child{

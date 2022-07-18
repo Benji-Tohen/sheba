@@ -52,6 +52,9 @@ if(isset($_GET["error"]) && $_GET["error"]){
 <?php }?>
 <link type="text/css" href="JS/jquery-ui/css/ui-lightness/jquery-ui-1.8.23.custom.css" rel="stylesheet" />
 
+<link href="JS/select2/select2.css" rel="stylesheet" />
+<script src="JS/select2/select2.js"></script>
+
 <style type="text/css">
 .keyWordsWrapper{
 	position: relative;
@@ -77,7 +80,7 @@ if(isset($_GET["error"]) && $_GET["error"]){
 
 <script type="text/javascript">
 $(document).ready(function() {
-
+	$(".select2").select2();
 	$('#keyWords').keyup(function(){
 		var val=$('#keyWords').val();
 		var arr=val.split(',');
@@ -1433,7 +1436,7 @@ if($versionId){
 	";
 	$arrForms=$db->getArray($query);
 	?>
-	<select name="wm_forms" onchange="if(this.value>0){$('#formData').slideDown();}else{$('#formData').slideUp();}">
+	<select name="wm_forms" class="select2" onchange="if(this.value>0){$('#formData').slideDown();}else{$('#formData').slideUp();}">
 		<option value="0">-- NO FROM --</option>
 	<?php foreach($arrForms as $form){?>
 		<option value="<?php echo $form["ID"];?>" <?php echo $form["ID"]==$row["wm_forms"]?"selected":"";?>><?php echo $form["Name"];?></option>

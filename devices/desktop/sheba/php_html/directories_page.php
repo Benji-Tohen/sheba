@@ -1,4 +1,6 @@
-<?php if(($arrUnits[$i]['Name']) && ($arrUnits[$i]['AudioFile'])){ ?>
+<?php if( $arrUnits[$i]['Title'] == 1 ){ ?>
+    <h2 class="searchCategodyTitle pushdown"><?php echo $arrUnits[$i]['Name']; ?></h2>
+<?php } else if(($arrUnits[$i]['Name']) && ($arrUnits[$i]['AudioFile'])){ ?>
 <div class="row">
     <!-- ITEM TITLE -->
     <div class="col-6 col-sm-6 col-md-8 col-lg-8 itemText">

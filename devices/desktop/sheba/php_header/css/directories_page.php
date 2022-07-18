@@ -171,6 +171,9 @@ h2.searchCategodyTitle{
 .itemPhone{
     text-align: <?php echo $gui->getRight();?>;
 }
+.directoriesPage .pushdown{
+    margin-top: 1em;
+}
 
 /*--------------------------  Laptops ( max 1400 ) --------------------------*/
 @media (max-width:1400px){

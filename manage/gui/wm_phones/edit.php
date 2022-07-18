@@ -17,28 +17,9 @@ if($_POST){
 	$arrFields=array(
 		"Name"			 =>	$_POST["Name"],
 		"AudioFile"		 =>	$_POST["AudioFile"],
-		"Parent"     	 => $_POST["parent"]
-
+		"Parent"     	 => $_POST["parent"],
+		"Title"			 => $_POST["title"] === "on" ? 1: 0
 	);
-
-/*
-	if(!$id){
-		$query="SELECT MAX(Ordering) AS max_ordering FROM ".$update_table." WHERE WM_Pages=".$_POST["page_id"];
-		$max_ordering=$db->getField($query, "max_ordering");
-		
-		$ordering=$max_ordering+1;
-		
-		$arrFields["Ordering"]=$ordering;
-	}
-*/	
-
-if($_SERVER['REMOTE_ADDR'] == '31.168.120.186'){
-		echo "TEST: ";
-		echo "<pre>";
-		print_r($_POST);
-		echo "</pre>";
-}
-
 		
 	$new_id=$content_update->update($id, $arrFields);
 	
@@ -46,24 +27,6 @@ if($_SERVER['REMOTE_ADDR'] == '31.168.120.186'){
 		$id=$new_id;
 	}
 	
-
-	
-/*
-	if(is_uploaded_file($_FILES['user_file']['tmp_name'])){
-		$file_path="webfiles/".$folderName."/".$id."/";
-		$full_file_path="../../".$file_path; 
-		@chmod($full_file_path, 0777);
-	
-		$file=new File();
-		$file->checkPath($full_file_path);
-
-		$file_name=str_replace(" ", "_", $_FILES['user_file']['name']);
-		
-		$content_update->update($id, array("File_Name"=>$file_path.$file_name));
-		move_uploaded_file($_FILES['user_file']['tmp_name'], $full_file_path.$file_name);
-		@chmod($full_file_path.$file_name, 0777);
-	}
-*/
 	if(!$_POST["SubmitAdd"]){
 		header("location: index.php?show=".$folderName."/index&page_id=".$page_id."&search=".$_REQUEST["search"]);
 		exit;
@@ -127,11 +90,21 @@ list($name, $ext)=explode("[.]", $fileNameArr);
 	</tr>
 	<tr>
 		<td><?php echo $text["Name"];?>:</td>
-		<td><input type="text" name="Name" value="<?php echo $row_item["Name"];?>" dir="ltr" /></td>		
-	</tr>
-		<td><?php echo $text["Parent"];?>:</td>
 		<td>
- 			<select name="parent" id="parent">
+			<div>
+				<input type="text" name="Name" value="<?php echo $row_item["Name"];?>" dir="ltr" />
+				<label for="NameAsTitle">
+					<input <?php echo $row_item["Title"] == 1 ? "checked" : ""; ?> type="checkbox" name="title" id="NameAsTitle">
+					<span><?php echo $text["Title"]; ?></span>
+				</label>
+			</div>
+		</td>
+	</tr>
+		<td><?php // echo $text["Parent"].":";?></td>
+		<td>
+			<input type="hidden" name="parent" value="2">
+ 			<?php /*
+			<select name="parent" id="parent">
 				<option value="0">ROOT</option>
 				<?php
 
@@ -143,6 +116,8 @@ list($name, $ext)=explode("[.]", $fileNameArr);
 				}
 				?>
 			</select> 
+			*/
+			?>
 		</td>		
 	</tr>
 	<tr>

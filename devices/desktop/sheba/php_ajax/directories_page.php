@@ -8,7 +8,8 @@ if(isset($_POST['searchedAlpha'])){/*search by first letter of name*/
     $firstLetter = $_POST['searchedAlpha'];
 
     $query = "SELECT DISTINCT wm_phones.Name, wm_phones.AudioFile FROM wm_phones 
-          WHERE wm_phones.Name LIKE '".mysqli_real_escape_string($db->conn,$firstLetter)."%'";
+          WHERE wm_phones.Name LIKE '".mysqli_real_escape_string($db->conn,$firstLetter)."%'
+          AND wm_phones.Title=0";
 
     
 }else{/*regular 3 fields search*/
@@ -17,7 +18,7 @@ if(isset($_POST['searchedAlpha'])){/*search by first letter of name*/
     $searchByUnit = ($_POST['searchByUnit'] == '' ? '': " AND wm_connected_pages_ids.wm_connected_wm_pages_ids = ".intval($_POST['searchByUnit']));*/
     
 
-    $query = "SELECT * FROM wm_phones WHERE wm_phones.Name LIKE '%$searchedName%'";
+    $query = "SELECT * FROM wm_phones WHERE wm_phones.Name LIKE '%$searchedName%' ORDER BY Ordering";
 
 }
 
