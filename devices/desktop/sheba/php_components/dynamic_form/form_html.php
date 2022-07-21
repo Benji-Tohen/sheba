@@ -1,3 +1,4 @@
+<?php include($_SERVER["DOCUMENT_ROOT"]."/devices/desktop/sheba/php_components/select2.php");?>
 <!--  DINAMIC FORM  -->
 <?php if($wmPage["wm_forms"]){ ?>
 <div id="form_anchor">

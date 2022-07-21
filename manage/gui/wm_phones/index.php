@@ -149,6 +149,12 @@ $arr=$db->getArray($query); // " WHERE Domain_Parent=$domain_parent AND 1"
 	.move-item{
 		margin-top: .5em;
 	}
+	.listItemText {
+		width:520px;
+	}
+	.listItemIcon {
+		width:auto;
+	}
 </style>
 <?php require_once('common/body.php');?>
 <div class="navigator_line">
@@ -222,13 +228,13 @@ $arr=$db->getArray($query); // " WHERE Domain_Parent=$domain_parent AND 1"
 <br />
 
 
-<?php echo $text["Display"];?>
+<!-- <?php echo $text["Display"];?>
 <select name="num_items" onchange="document.location='index.php?show=<?php echo $folderName;?>/index&num_items='+this.value;">
 	<option value="5" <?php echo ($numItemsPerPage==5)?"selected":"";?>>5</option>
 	<option value="10" <?php echo ($numItemsPerPage==10)?"selected":"";?>>10</option>
 	<option value="50" <?php echo ($numItemsPerPage==50)?"selected":"";?>>50</option>
 	<option value="100" <?php echo ($numItemsPerPage==100)?"selected":"";?>>100</option>
 </select>
-<?php echo $text["Items on page"];?>
+<?php echo $text["Items on page"];?> -->
 
-<div class="pager_numbers"><?php echo $pagelist;?></div>
+<!-- <div class="pager_numbers"><?php echo $pagelist;?></div> -->

@@ -14,14 +14,14 @@
                 ?>
                     <div>
                         <!-- Video desktop -->
-                        <div class="item d-none d-md-block">
+                        <div class="item d-none d-md-block" onclick="<?php echo $onclick; ?>" <?php echo $onclick ? "style='cursor:pointer'": ""; ?>>
                             <video autoplay muted loop playsinline class="vid" alt="<?php echo $item["Name"]; ?>">
                             <source src="<?php echo $item["File_Name"]; ?>" type="video/mp4">
                             Your browser does not support the video tag.
                             </video>
                         </div>
                         <!-- Video mobile -->
-                        <div class="item d-block d-md-none">
+                        <div class="item d-block d-md-none" onclick="<?php echo $onclick; ?>" <?php echo $onclick ? "style='cursor:pointer'": ""; ?>>
                             <video autoplay muted loop playsinline class="vid" alt="<?php echo $item["Name"]; ?>">
                             <source src="<?php echo $videoMobile; ?>" type="video/mp4">
                             Your browser does not support the video tag.

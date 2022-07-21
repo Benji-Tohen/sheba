@@ -27,7 +27,6 @@ h1.{
     border: 1px solid #d2d2d2;
     font-size: 18px;
     border-<?php echo $gui->getLeft();?>: 5px solid #19bd9b;
-    margin-bottom: 14px;
     -webkit-border-top-<?php echo $gui->getRight();?>-radius: 5px;
     -webkit-border-bottom-<?php echo $gui->getRight();?>-radius: 5px;
     -moz-border-radius-top<?php echo $gui->getRight();?>: 5px;
@@ -37,8 +36,12 @@ h1.{
 }
 .formPage .select2-container .select2-search--inline .select2-search__field{
     height: 20px;
+    line-height:20px;
+    font-family:inherit !important;
 }
-
+.formPage .select2-container .select2-selection--multiple:last-child {
+    margin:0;
+}
 .formPage .form-control:last-child{
     margin-bottom: 14px;
 }

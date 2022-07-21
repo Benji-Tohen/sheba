@@ -132,6 +132,8 @@ if($pageType==1){
     }
 }
 
+// pageAliasId 74870
+
 switch ($pageType) {
     case '98':/* event - we have mofa id - get event connected to it */
         $mofaId = intval($getParams[2]);
@@ -222,11 +224,10 @@ switch ($pageType) {
                     "Phone" => trim($_POST['Phone']),
                     "MobilePhone" => trim($_POST['MobilePhone']),
                     "Sheba_ID" => -1,/*temp fix*/
-                    "Show_ID" => intval($mofaId)
+                    "Show_ID" => intval($mofaId),
                 );  
                     
                 $isSent = $elad->register_patient_to_event_show($event_data, $mofaId);
-                print_r($isSent); exit;
                 $eladResult = json_decode($isSent);
                 $eladResult=$eladResult->{'Success'};
                 $formSent=true;
@@ -336,8 +337,6 @@ switch ($pageType) {
             "Phone" => trim($_POST['Phone']),
             "Sheba_ID" => -1
         );
-
-
 
         if($overrideEventEmail && $overrideEventEmail != ''){
             $event_data["OverrideEventEmail"] = $overrideEventEmail;
@@ -511,6 +510,7 @@ if(is_array($form)){
                 $fieldItemHTML=$field["HTML"];
             
                 $fieldItemHTML=str_replace('[#FIELD_NAME#]',    $fieldName,     $fieldItemHTML);
+                
                 $fieldItemHTML=str_replace('[#NAME#]',      $value,     $fieldItemHTML);
                 
                 $fieldItemHTML=str_replace('[#SELECTED#]',  "",         $fieldItemHTML);

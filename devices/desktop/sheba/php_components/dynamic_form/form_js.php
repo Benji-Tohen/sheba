@@ -23,6 +23,16 @@ $(document).ready(function() {
     $('#sendForm').submit(function(event) {
         delayBtn('#submit', 10000)
     });
+    $(".select2").each(function(index, select){
+        const data = {
+            selectionCssClass: "form-control",
+            dir: "rtl"
+        };
+        if( "ph" in select.dataset ){
+            data["placeholder"] = select.dataset.ph;
+        }
+        $(select).select2(data);
+    });
 });
 
 function recaptchaCallback() {

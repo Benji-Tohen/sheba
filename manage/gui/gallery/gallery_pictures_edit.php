@@ -321,9 +321,9 @@ if($_POST){
 
 			/* CHECK IF FILE IS MORE THEN X */
 			$filesize = filesize($_FILES['File_Name_Mobile']['tmp_name']);
-			if($filesize > 200000){
+			if($filesize > 5000000){
 			// if($filesize > 50000000){
-				die("THE FILE YOU UPLOADED IS MORE THEN 50MB. PLEASE UPLOAD LESS THEN 50MB.");
+				die("THE FILE YOU UPLOADED IS MORE THEN 5MB. PLEASE UPLOAD LESS THEN 50MB.");
 			} else {
 				move_uploaded_file($_FILES['File_Name_Mobile']['tmp_name'], $full_file_path.$file_name);
 				chmod($full_file_path, 0777);

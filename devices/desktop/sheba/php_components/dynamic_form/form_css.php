@@ -69,3 +69,29 @@ textarea.form-control{
 #sendForm{
     margin-top: 30px;
 }
+.select2-container--default .select2-selection--multiple.form-control,
+.form-control{
+    max-width: 340px;
+    height: 50px;
+    border: 1px solid #d2d2d2;
+    font-size: 18px;
+    border-<?php echo $gui->getLeft();?>: 5px solid #19bd9b;
+    -webkit-border-top-<?php echo $gui->getRight();?>-radius: 5px;
+    -webkit-border-bottom-<?php echo $gui->getRight();?>-radius: 5px;
+    -moz-border-radius-top<?php echo $gui->getRight();?>: 5px;
+    -moz-border-radius-bottom<?php echo $gui->getRight();?>: 5px;
+    border-top-<?php echo $gui->getRight();?>-radius: 5px;
+    border-bottom-<?php echo $gui->getRight();?>-radius: 5px;
+}
+.select2-container .select2-search--inline .select2-search__field{
+    height: 20px;
+    line-height:20px;
+    font-family:inherit !important;
+}
+.form-group .select2-container--default.select2-container--focus .select2-selection--multiple {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}

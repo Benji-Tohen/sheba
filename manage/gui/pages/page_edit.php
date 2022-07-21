@@ -31,7 +31,6 @@ if(isset($_GET["error"]) && $_GET["error"]){
 <script language="JavaScript" type="text/javascript" src="pages/ajax_search_parent.js"></script>
 <script language="JavaScript" type="text/javascript" src="JS/ajax.js"></script>
 
-
 <!--	imageareaselect	-->
 <script src="ckeditor/ckeditor.js"></script>
 
